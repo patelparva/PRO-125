@@ -12,7 +12,7 @@ import os, ssl, time
 X=np.load('image.npz')['arr_0']
 y=pd.read_csv('labels.csv')['labels']
 
-X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=52,train_size=0.75,test_size=0.25)
+X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=9,train_size=3500,test_size=500)
 
 clf=LogisticRegression(solver='saga',multi_class='multinomial').fit(X_train,y_train)
 
